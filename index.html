@@ -1,0 +1,38 @@
+<style type="text/css">
+.tvWidget {
+	height: 100%;
+	width: 100%;
+}
+
+#tvElement {
+	height: 100%;
+	width: 100%;
+}
+</style>
+<div class="tvWidget">
+	<video autoplay="true" id="tvElement"> No video stream
+		available.
+	</video>
+</div>
+
+<script>
+    /* simulate layout interface: for testing purpose only */
+    el = {
+        "select" : function(cfg) {
+            return document.querySelector(cfg);
+        },
+        "selectAll" : function(cfg) {
+            return document.querySelectorAll(cfg);
+        },
+        "onResize" : function(cfg) {
+            window.onresize = cfg;
+        }
+    };
+</script>
+<script src="./js/tv.js"></script>
+<script>
+    widget.update({
+        param : {}
+    });
+</script>
+<!-- FOR TESTING PURPOSE -->
