@@ -6,10 +6,8 @@ var widget = {
 // MediaStreamTrack.getSources(function(sources){ })
     _playStream : function() {
         /* if a stream is alife dont interrupt */
-        if (!navigator.getUserMedia || lastStream) {
-            console.log(lastStream);
+        if (!navigator.getUserMedia || lastStream || lastStream.ended)
             return;
-        }
 
         navigator.getUserMedia({
             video : true

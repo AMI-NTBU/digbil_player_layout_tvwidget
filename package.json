@@ -1,7 +1,7 @@
 {
   "name": "digbil_player_layout_tvwidget",
   "description": "DigBil player tv widget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Renaud Sauvain",
   "dependencies": {
   },
