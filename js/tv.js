@@ -14,16 +14,19 @@ var widget = {
         }, function(stream) {
             lastStream = stream;
             videoElement.src = URL.createObjectURL(stream);
+            videoElement.style.opacity = 1;
         }, function(e) {
-            console.error(' -- tvwidget: ' + e);
-            console.error(e);
+            console.error(' -- tvwidget: no-stream available');
+            videoElement.style.opacity = 0;
         });
     },
     update : function(cfg) {
         if (navigator.getUserMedia)
             widget._playStream();
-        else
+        else {
+            videoElement.style.opacity = 0;
             console.error(' -- tvwidget: TV stream not supported in your browser/device');
+        }
     }
 };
 
