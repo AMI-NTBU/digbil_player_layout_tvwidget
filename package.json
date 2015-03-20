@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:digbil/digbil_player_layout_tvwidget.git"
+    "url": "git@github.com:AMI-NTBU/digbil_player_layout_tvwidget.git"
   },
   "private": true
 }
